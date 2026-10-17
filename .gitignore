@@ -1,0 +1,85 @@
+# OS and editor files
+.DS_Store
+._*
+Thumbs.db
+Desktop.ini
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# .NET / Visual Studio / MonoDevelop
+[Bb]in/
+[Oo]bj/
+.vs/
+packages/
+TestResults/
+*.user
+*.suo
+*.userprefs
+*.sln.docstates
+*.pdb
+*.mdb
+*.nupkg
+*.snupkg
+
+# Native build outputs and compiled binaries
+build/
+dist/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.so.*
+*.dylib
+*.dll
+*.exe
+*.out
+*.app/
+*.dSYM/
+
+# Extensionless executables produced by these projects
+/FormalMethods_TypeChecker/out
+/metsoftproc/out
+/lftc/lab1/lab1_[123]
+/lftc/lab3/lab3
+/lftc/lab4/l4
+/lftc/lab6/a
+/lftc/lab6/test
+
+# OCaml compiler outputs
+_build/
+_opam/
+*.cmi
+*.cmo
+*.cmx
+*.cma
+*.cmxa
+*.cmxs
+*.cmt
+*.cmti
+*.annot
+*.byte
+*.native
+
+# Generated Flex / Bison files and assembly output
+lex.yy.c
+lex.yy.h
+*.tab.c
+*.tab.h
+*.output
+/lftc/lab6/out.asm
+
+# MATLAB / Octave autosaves, compiled extensions, and session state
+*.asv
+*.m~
+*.mex*
+*.oct
+matlab_crash_dump.*
+octave-core
+octave-workspace

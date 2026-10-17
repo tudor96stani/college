@@ -1,0 +1,60 @@
+nonterm: program antet declarationstmt assignstmt stmtlist iostmt forstmt compstmt condstmt expression operator term boolexpr increment_decrement booloperator relation condition stmt
+
+term: { return const ; } include < > id using namespace int ( ) = + - * / % cin gg cout ll for double , <= >= == != && || ++ -- if
+
+start:program
+
+program?antet { stmtlist return const ; const
+antet?include < id > using namespace id ; int id ( )
+stmtlist?stmt
+stmtlist?stmt stmtlist
+stmt?declarationstmt
+stmt?assignstmt
+stmt?iostmt
+stmt?forstmt
+stmt?compstmt
+stmt?condstmt
+
+compstmt?{ stmtlist }
+
+declarationstmt?int id extra_decl ;
+declarationstmt?double id extra_decl ;
+extra_decl?ε
+extra_decl?, id
+extra_decl?, id extra_decl
+
+assignstmt?id = expression ;
+expression?term
+expression?expression operator expression
+expression?( expression operator expression )
+term?id
+term?const
+operator?+
+operator?-
+operator?*
+operator?/
+operator?%
+
+iostmt?cin gg id ;
+iostmt?cout ll id ;
+
+forstmt?for ( assignstmt ; boolexpr ; increment_decrement ) { stmtlist }
+boolexpr?boolexpr booloperator boolexpr
+boolexpr?condition
+condition?expression relation expression
+relation?<
+relation?<=
+relation?>
+relation?>=
+relation?==
+relation?!=
+
+booloperator?&&
+booloperator?||
+
+increment_decrement?id ++
+increment_decrement?id --
+increment_decrement?++ id
+increment_decrement?-- id
+
+condstmt?if ( boolexpr ) { stmtlist }

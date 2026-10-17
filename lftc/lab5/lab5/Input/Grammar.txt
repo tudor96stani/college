@@ -1,0 +1,64 @@
+﻿program antet boolexprcont in_cont out_cont extra_decl increment_decrement_operation extra_decl factor expression1 term1 stmtlist1 returnstmt declarationstmt assignstmt stmtlist iostmt forstmt compstmt condstmt expression operator term stmt boolexpr increment_decrement booloperator relation condition addsub term prodterm value sum unit produnit
+{ return const ; } ε include < > id using namespace int ( ) = + - * / % cin >> cout << for double , <= >= == != && || ++ -- if
+program
+program?antet { stmtlist }
+antet?include < id > using namespace id ; int id ( )
+stmtlist?stmt stmtlist1
+stmtlist1?stmtlist
+stmtlist1?ε
+stmt?declarationstmt
+stmt?assignstmt
+stmt?iostmt
+stmt?forstmt
+stmt?compstmt
+stmt?condstmt
+stmt?returnstmt
+returnstmt?return const ;
+compstmt?{ stmtlist }
+declarationstmt?int id extra_decl ;
+declarationstmt?double id extra_decl ;
+extra_decl?ε
+extra_decl?, id extra_decl
+assignstmt?id = expression ;
+expression?term expression1
+expression1?+ expression
+expression1?- expression
+expression1?ε
+term?factor term1
+term1?* term
+term1?/ term
+term1?% term
+term1?ε
+factor?id
+factor?const
+factor?( expression )
+factor?- factor
+operator?+
+operator?-
+operator?*
+operator?/
+operator?%
+iostmt?cin >> id in_cont ;
+iostmt?cout << id out_cont ;
+in_cont?>> id in_cont
+in_cont?ε
+out_cont?<< id out_cont
+out_cont?ε
+condition?expression relation expression
+relation?<
+relation?<=
+relation?>
+relation?>=
+relation?==
+relation?!=
+booloperator?&&
+booloperator?||
+condstmt?if ( boolexpr ) { stmtlist }
+boolexpr?condition boolexprcont
+boolexprcont?ε
+boolexprcont?booloperator boolexpr
+forstmt?for ( assignstmt boolexpr ; increment_decrement ) { stmtlist }
+increment_decrement?id increment_decrement_operation
+increment_decrement_operation?++
+increment_decrement_operation?--
+increment_decrement?increment_decrement_operation id

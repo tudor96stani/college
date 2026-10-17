@@ -1,0 +1,10 @@
+The structure of the file:
+Line 1 : the states (as groups of characters - a state cannot contain a space in its name). Delimeted by space.
+Line 2: The alphabet: delimeted by space
+Line 3: The initial state (same restriction for state name)
+Line 4: The final states (same restrictions as for Line 1)
+Line > 5: The transition functions (one on each line). Must have the form qi,e,qj, where qi,qj are states and e is an element in the alphabet.
+
+
+Implementation
+The state is represented as a class which contains the MultiMap for the transitions and the name.

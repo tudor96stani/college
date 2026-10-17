@@ -1,0 +1,10 @@
+#!/bin/bash
+param=${1##*/}
+echo "Compiling" $param
+ocamlc -o out $param
+ocamlrun out
+for i in "$param"; do
+    IFS='.' read -ra name <<< "$i"
+    rm "$name".cmi "$name".cmo
+done
+rm out

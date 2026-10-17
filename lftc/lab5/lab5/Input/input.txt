@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+int main(){
+    int r;
+    double MPI;
+    MPI=3.1415;
+    cin>>r>>r;
+    double a,c;
+    int doi;
+    c=PI*2*r;
+    a=MPI*2*r;
+    cout<<c;
+    cout<<a;
+    int modA;
+    modA=a%10;
+    if(a<0 && b>1 || c==1)
+    {
+        cout<<a;
+    }
+    int i;
+    i=((10+a)*5)/b;
+    for(i=0;i<10;i++)
+    {
+        cout<<i<<a;
+    }
+    return 0;
+}
